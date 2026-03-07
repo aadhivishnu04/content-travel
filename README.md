@@ -24,7 +24,7 @@ I enjoy building real-world applications and continuously improving my problem-s
 - HTML
 - CSS
 - JavaScript
-- React (Learning)
+- React 
 
 **Tools**
 - Git
