@@ -116,7 +116,7 @@ style={{fontFamily:"Yeseva One"}}
 
 {/* BUTTON */}
 
-<button className="mt-[18px] px-[18px] py-[8px] text-[12px] font-semibold rounded-full border border-transparent group-hover:border-red-500 transition flex items-center gap-[6px]">
+<button className="mt-[18px] px-[18px] py-[8px] text-[16px] font-semibold rounded-full border border-transparent group-hover:border-red-500 transition flex items-center gap-[6px]">
 
 READ MORE
 
