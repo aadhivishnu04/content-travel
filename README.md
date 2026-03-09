@@ -36,7 +36,6 @@ I enjoy building real-world applications and continuously improving my problem-s
 
 ## 📚 Currently Learning
 - Spring Boot (Advanced)
-- React
 - RESTful Web Services
 - Full Stack Project Development
 
