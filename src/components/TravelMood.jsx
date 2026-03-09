@@ -1,0 +1,121 @@
+import beaches from "../assets/beaches.jpg";
+import city from "../assets/city.jpg";
+import fantasy from "../assets/fantasy.jpg";
+import deserts from "../assets/deserts.jpg";
+import heritage from "../assets/heritage.jpg";
+import hills from "../assets/hills.jpg";
+import volcano from "../assets/volcano.jpg";
+import wildlife from "../assets/wildlife.jpg";
+import camping from "../assets/camping.jpg";
+import festivals from "../assets/festivals.jpg";
+import hiking from "../assets/hiking.jpg";
+import culinary from "../assets/culinary.jpg";
+import adventure from "../assets/adventure.jpg";
+import friends from "../assets/friends.jpg";
+import family from "../assets/family.jpg";
+import solo from "../assets/solo.jpg";
+import romantic from "../assets/romantic.jpg";
+import weekend from "../assets/weekend.jpg";
+import cruise from "../assets/cruise.jpg";
+import theme from "../assets/themepark.jpg";
+
+export default function TravelMood() {
+
+const moods = [
+
+{title:"Beaches", img:beaches},
+{title:"City Escapes", img:city},
+{title:"Fantasy", img:fantasy},
+{title:"Deserts", img:deserts},
+
+{title:"Heritage", img:heritage},
+{title:"Hill Stations", img:hills},
+{title:"Volcanoes", img:volcano},
+{title:"Wildlife", img:wildlife},
+
+{title:"Camping", img:camping},
+{title:"Festivals", img:festivals},
+{title:"Hiking", img:hiking},
+{title:"Culinary", img:culinary},
+
+{title:"Adventure", img:adventure},
+{title:"Friends", img:friends},
+{title:"Family", img:family},
+{title:"Solo Travel", img:solo},
+
+{title:"Romantic Escapes", img:romantic},
+{title:"Weekend", img:weekend},
+{title:"Cruises", img:cruise},
+{title:"Theme Parks", img:theme}
+
+]
+
+return (
+
+<section className="max-w-[1204px] mx-auto px-4 my-12">
+
+{/* HEADER */}
+
+<div className="flex items-center gap-3 mb-8">
+
+<div className="w-[3px] h-[26px] bg-red-500"></div>
+
+<h2 className="text-[24px] font-semibold">
+What’s Your Travel Mood?
+</h2>
+
+</div>
+
+
+{/* GRID */}
+
+<div className="grid grid-cols-4 gap-6">
+
+{moods.map((item,i)=>(
+
+<div
+key={i}
+className="relative rounded-[14px] overflow-hidden group cursor-pointer transition-transform duration-300 hover:-translate-y-2"
+>
+
+<img
+src={item.img}
+className="w-full h-[240px] object-cover group-hover:scale-105 transition duration-500"
+/>
+
+{/* DARK OVERLAY */}
+
+<div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+
+
+{/* TITLE */}
+
+<h3 className="absolute bottom-4 left-4 text-white text-sm font-medium">
+
+{item.title}
+
+</h3>
+
+
+{/* BUTTON */}
+<button className="absolute bottom-3 right-3 flex items-center gap-1 bg-white text-black text-xs px-3 py-1 rounded-full transition-all duration-300 group-hover:bg-black group-hover:text-white">
+
+  View All
+
+  <span className="inline-block transition-transform duration-300 rotate-45 group-hover:rotate-0 group-hover:translate-x-1">
+    →
+  </span>
+
+</button>
+
+</div>
+
+))}
+
+</div>
+
+</section>
+
+)
+
+}

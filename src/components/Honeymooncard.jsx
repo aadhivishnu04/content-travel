@@ -35,9 +35,8 @@ posts:[
 
 return(
 
-<div style={{fontFamily:"Poppins"}} className="w-[1204px] mx-auto mt-[40px] space-y-[70px]">
+<div style={{fontFamily:"Poppins"}} className="w-full max-w-[1204px] mx-auto px-4 mt-[40px] space-y-[50px] md:space-y-[70px]">
 
-{/* GOOGLE FONTS */}
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Yeseva+One&display=swap" rel="stylesheet"/>
 
 {sections.map((section,sIndex)=>(
@@ -45,23 +44,31 @@ return(
 
 {/* HEADER */}
 
-<div className="flex justify-between items-center mb-[30px]">
+<div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-[24px] md:mb-[30px]">
 
 <div className="flex items-center gap-[10px]">
-<span className="w-[3px] h-[30px] bg-red-600"></span>
-<h2 className="text-[36px] font-semibold">{section.title}</h2>
+<span className="w-[3px] h-[26px] md:h-[30px] bg-red-600"></span>
+
+<h2 className="text-[24px] sm:text-[28px] md:text-[36px] font-semibold">
+{section.title}
+</h2>
 </div>
 
-<button className="flex items-center gap-2 px-[18px] py-[9px] text-[13px] font-semibold rounded-full bg-black text-white hover:bg-red-600 transition">
+<button className="group w-fit flex items-center gap-2 px-[20px] py-[9px] text-[12px] md:text-[13px] font-semibold rounded-full bg-red-600 text-white hover:bg-black transition-all duration-300">
+
 VIEW ALL
-<span className="rotate-[-45deg] group-hover:rotate-0 transition">→</span>
+
+<span className="rotate-[-45deg] group-hover:rotate-0 transition-transform duration-300">
+→
+</span>
+
 </button>
 
 </div>
 
 {/* CARDS */}
 
-<div className="grid grid-cols-3 gap-[30px]">
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[22px] md:gap-[30px]">
 
 {section.posts.map((post,i)=>{
 
@@ -72,7 +79,7 @@ return(
 <div
 key={id}
 style={{background:post.bg}}
-className="rounded-[20px] p-[16px] group cursor-pointer"
+className="rounded-[20px] p-[14px] md:p-[16px] group cursor-pointer"
 >
 
 <div className="relative rounded-[14px] overflow-visible">
@@ -80,23 +87,19 @@ className="rounded-[20px] p-[16px] group cursor-pointer"
 <img
 src={post.image}
 alt=""
-className="w-full h-[260px] object-cover rounded-[14px]"
+className="w-full h-[200px] sm:h-[230px] md:h-[260px] object-cover rounded-[14px]"
 />
 
-{/* TAG */}
-
-<span className="absolute top-[0px] left-[12px] text-[11px] px-[10px] py-[4px] bg-black/70 text-white rounded-sm uppercase tracking-wider">
+<span className="absolute top-[0px] left-[12px] text-[10px] md:text-[11px] px-[9px] py-[3px] bg-black/70 text-white rounded-sm uppercase tracking-wider">
 HONEYMOON {section.tag}
 </span>
-
-{/* BOOKMARK */}
 
 <button
 onClick={(e)=>{
 e.stopPropagation()
 setBookmark(prev=>({...prev,[id]:!prev[id]}))
 }}
-className="absolute -top-3 -right-3 w-[36px] h-[36px] bg-white rounded-full flex items-center justify-center border border-red-200 text-red-600 shadow-md"
+className="absolute -top-3 -right-3 w-[32px] h-[32px] md:w-[36px] md:h-[36px] bg-white rounded-full flex items-center justify-center border border-red-200 text-red-600 shadow-md"
 >
 
 {bookmark[id] ? <FaBookmark size={14}/> : <FaRegBookmark size={14}/>}
@@ -105,22 +108,18 @@ className="absolute -top-3 -right-3 w-[36px] h-[36px] bg-white rounded-full flex
 
 </div>
 
-{/* TITLE */}
-
 <h3
-className="mt-[18px] text-[22px] leading-[1.35]"
+className="mt-[14px] md:mt-[18px] text-[18px] sm:text-[20px] md:text-[22px] leading-[1.35]"
 style={{fontFamily:"Yeseva One"}}
 >
 {post.title}
 </h3>
 
-{/* BUTTON */}
-
-<button className="mt-[18px] px-[18px] py-[8px] text-[16px] font-semibold rounded-full border border-transparent group-hover:border-red-500 transition flex items-center gap-[6px]">
+<button className="group mt-[14px] md:mt-[18px] px-[16px] py-[7px] text-[14px] md:text-[16px] font-semibold rounded-full border border-red hover:border-red-500 transition flex items-center gap-[6px]">
 
 READ MORE
 
-<span className="rotate-[-45deg] group-hover:rotate-0 transition">→</span>
+<span className="rotate-[-45deg] group-hover:rotate-0 transition-transform duration-300">→</span>
 
 </button>
 

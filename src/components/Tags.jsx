@@ -48,15 +48,15 @@ const tags = [
 
 export default function Tags(){
   return (
-    <div className="w-[1204px] mx-auto my-[25px] flex flex-wrap gap-[14px] font-[Poppins]">
+    <div className="w-full max-w-[1204px] mx-auto px-3 sm:px-4 md:px-6 my-[25px] flex flex-wrap gap-[10px] sm:gap-[12px] md:gap-[14px] font-[Poppins]">
 
       {tags.map(({icon,text,bg,color},i)=>(
         <div
           key={i}
-          className="flex items-center gap-[8px] p-[10px] rounded-[10px] text-[20px] font-semibold cursor-pointer transition-all duration-200"
+          className="flex items-center gap-[6px] sm:gap-[8px] px-[10px] py-[8px] sm:px-[12px] sm:py-[10px] rounded-[10px] text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-semibold cursor-pointer transition-all duration-200"
           style={{ background:bg, color }}
         >
-          <span className="text-[14px]">
+          <span className="text-[12px] sm:text-[14px]">
             {icon}
           </span>
 
