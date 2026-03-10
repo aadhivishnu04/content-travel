@@ -48,7 +48,7 @@ const tags = [
 
 export default function Tags(){
   return (
-    <div className="w-full max-w-[1204px] mx-auto px-3 sm:px-4 md:px-6 my-[0px 0px 12px] flex flex-wrap gap-[10px] sm:gap-[12px] md:gap-[14px] font-[Poppins]">
+    <div className="w-full max-w-[1352px] mx-auto px-3 sm:px-4 md:px-6 my-[0px 0px 12px] flex flex-wrap gap-[10px] sm:gap-[12px] md:gap-[14px] font-[Poppins]">
 
       {tags.map(({icon,text,bg,color},i)=>(
         <div

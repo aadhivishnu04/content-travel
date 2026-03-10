@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaRegBookmark, FaBookmark } from "react-icons/fa";
 
 import card1 from "../assets/card1.webp";
@@ -10,7 +10,7 @@ import card6 from "../assets/card6.jpg";
 
 export default function HoneymoonSection() {
 
-const [bookmark,setBookmark] = useState({})
+
 
 const sections = [
 {
@@ -35,7 +35,7 @@ posts:[
 
 return(
 
-<div style={{fontFamily:"Poppins"}} className="w-full max-w-[1204px] mx-auto px-4 mt-[60px] space-y-[40px] md:space-y-[60px]">
+<div style={{fontFamily:"Poppins"}} className="w-full max-w-[1352px] mx-auto px-4 mt-[60px] space-y-[40px] md:space-y-[60px]">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Yeseva+One&display=swap" rel="stylesheet"/>
 
@@ -85,13 +85,23 @@ style={{background:post.bg}}
 className="rounded-[20px] p-[14px] md:p-[16px]  cursor-pointer group"
 >
 
-<div className="relative rounded-[14px] overflow-visible">
-
-<img
-src={post.image}
-alt=""
-className="w-full h-[220px] md:h-[260px] object-cover rounded-[14px]"
-/>
+<div className="relative">
+  <img
+    src={post.image}
+    className="w-full h-[375px] object-coverobject-[center_25%] rounded-[12px]"
+  />
+  <button className="absolute top-[10px] right-[10px] w-[34px] h-[34px] flex items-center justify-center bg-white rounded-full shadow-md hover:bg-red-50 transition">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="red"
+    strokeWidth="2"
+    className="w-[16px] h-[16px]"
+  >
+    <path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/>
+  </svg>
+</button>
 
 <span
   className="absolute top-[0px] left-[12px] text-[10px] md:text-[11px] px-[10px] py-[4px] text-white rounded-sm uppercase tracking-wider"
@@ -100,18 +110,7 @@ className="w-full h-[220px] md:h-[260px] object-cover rounded-[14px]"
   HONEYMOON {section.tag}
 </span>
 
-<button
-onClick={(e)=>{
-e.stopPropagation()
-setBookmark(prev=>({...prev,[id]:!prev[id]}))
-}}
-className="absolute -top-3 -right-3 w-[32px] h-[32px] md:w-[36px] md:h-[36px] bg-white rounded-full flex items-center justify-center border border-red-200 text-red-600 shadow-md"
 
->
-
-{bookmark[id] ? <FaBookmark size={14}/> : <FaRegBookmark size={14}/>}
-
-</button>
 
 </div>
 

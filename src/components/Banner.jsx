@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { FaRegBookmark, FaBookmark } from "react-icons/fa";
 
 import img1 from "../assets/image1.jpg";
-import img2 from "../assets/image2.jpg";
-import img3 from "../assets/image3.jpg";
+import img2 from "../assets/banner2.jpg";
+import img3 from "../assets/banner3.jpg";
 
 export default function Banner() {
 
@@ -38,7 +38,7 @@ export default function Banner() {
   }, []);
 
   return (
-    <div className="w-full md:max-w-[1204px] md:mx-auto px-0 md:px-3 lg:px-4 my-0 md:my-6">
+    <div className="w-full md:max-w-[1352px] md:mx-auto px-0 md:px-3 lg:px-4 my-0 md:my-6">
 
       <div className="relative h-[515px] md:h-[460px] lg:h-[540px] overflow-hidden rounded-none md:rounded-[16px] group shadow-lg">
 
@@ -48,7 +48,7 @@ export default function Banner() {
             key={index}
             src={slide.image}
             alt="banner"
-            className={`absolute inset-0 w-full h-full object-cover brightness-[0.85] transition-opacity duration-700 ${
+            className={`absolute inset-0 w-full h-[540] object-cover brightness-[0.85] transition-opacity duration-700 ${
               index === active ? "opacity-100" : "opacity-0"
             }`}
           />
@@ -58,7 +58,7 @@ export default function Banner() {
         <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-black/0"></div>
 
         {/* TAG */}
-        <span className="absolute top-0 left-4 md:left-10 bg-red-600 text-white text-[10px] sm:text-[11px] font-semibold uppercase px-2 py-1 rounded">
+        <span className="absolute top-0 left-4 md:left-10 bg-red-600 text-white text-[10px] sm:text-[11px] font-semibold uppercase px-2 py-1 ">
           {slides[active].tag}
         </span>
 
@@ -71,9 +71,9 @@ export default function Banner() {
         </button>
 
         {/* DESKTOP TEXT */}
-        <div className="hidden md:block absolute left-10 top-1/2 -translate-y-1/2 max-w-[600px] text-white">
+        <div className="absolute top-80 hidden md:block absolute left-10 top-1/2 -translate-y-1/2 max-w-[738px] text-white">
 
-          <h1 className="text-[36px] lg:text-[36px] leading-[1.25] mb-5 font-['Yeseva_One'] max-w-[620px]">
+          <h1 className="text-[36px] margin top-30 lg:text-[46px] leading-[1.25] mb-5 font-['Yeseva_One'] max-w-[758.26px]">
             {slides[active].title}
           </h1>
 
