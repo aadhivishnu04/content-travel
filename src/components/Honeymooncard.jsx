@@ -17,41 +17,44 @@ const sections = [
 title:"World Honeymoon Exclusive 2026",
 tag:"GLOBAL",
 posts:[
-{title:"Valentine’s Travel 2026 – Romantic Getaways | Travel...",image:card1,bg:"#cfe7e1"},
-{title:"Bali Honeymoon: Love Woven in Waves and Wonder | Travel...",image:card2,bg:"#e7d2ea"},
-{title:"Maldives Honeymoon Guide: Dreamy Escapes for Every Couple...",image:card3,bg:"#efcaa7"}
+{title:"Valentine’s Travel 2026 – Romantic Getaways | Travel...",image:card1,bg:"#cfe7e1",btn:"#3f5b54"},
+{title:"Bali Honeymoon: Love Woven in Waves Travel...",image:card2,bg:"#e7d2ea",btn:"#4b3346"},
+{title:"Maldives Honeymoon Guide: Dreamy Escapes for Couple...",image:card3,bg:"#efcaa7",btn:"#6a4532"}
 ]
 },
 {
 title:"Exclusive India Honeymoon 2026",
 tag:"INDIA",
 posts:[
-{title:"Best Honeymoon Destinations in India by Month 2026 Guide...",image:card4,bg:"#f0c7c9"},
-{title:"Love in Every Glow: India’s Best Candlelight Dining Spots...",image:card5,bg:"#f1e0a6"},
-{title:"India’s Most Enchanting Honeymoon Retreats 2026 | Travel...",image:card6,bg:"#cfe3ea"}
+{title:"Best Honeymoon Destinations in India by 2026 Guide...",image:card4,bg:"#f0c7c9",btn:"#4b3340"},
+{title:"Love in Every Glow: India’s  Candlelight Dining Spots...",image:card5,bg:"#f1e0a6",btn:"#6b442d"},
+{title:"India’s Enchanting Honeymoon 2026 | Travel...",image:card6,bg:"#cfe3ea",btn:"#92a8adff"}
 ]
 }
 ]
 
 return(
 
-<div style={{fontFamily:"Poppins"}} className="w-full max-w-[1204px] mx-auto px-4 mt-[40px] space-y-[50px] md:space-y-[70px]">
+<div style={{fontFamily:"Poppins"}} className="w-full max-w-[1204px] mx-auto px-4 mt-[60px] space-y-[40px] md:space-y-[60px]">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Yeseva+One&display=swap" rel="stylesheet"/>
 
 {sections.map((section,sIndex)=>(
+
 <div key={sIndex}>
 
 {/* HEADER */}
 
-<div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-[24px] md:mb-[30px]">
+<div className="flex items-start sm:items-center justify-between gap-4 mb-[24px] md:mb-[30px]">
 
 <div className="flex items-center gap-[10px]">
+
 <span className="w-[3px] h-[26px] md:h-[30px] bg-red-600"></span>
 
-<h2 className="text-[24px] sm:text-[28px] md:text-[36px] font-semibold">
+<h2 className="text-[24px] sm:text-[28px] md:text-[36px] font-medium leading-[1.2]">
 {section.title}
 </h2>
+
 </div>
 
 <button className="group w-fit flex items-center gap-2 px-[20px] py-[9px] text-[12px] md:text-[13px] font-semibold rounded-full bg-red-600 text-white hover:bg-black transition-all duration-300">
@@ -79,7 +82,7 @@ return(
 <div
 key={id}
 style={{background:post.bg}}
-className="rounded-[20px] p-[14px] md:p-[16px] group cursor-pointer"
+className="rounded-[20px] p-[14px] md:p-[16px]  cursor-pointer group"
 >
 
 <div className="relative rounded-[14px] overflow-visible">
@@ -87,11 +90,14 @@ className="rounded-[20px] p-[14px] md:p-[16px] group cursor-pointer"
 <img
 src={post.image}
 alt=""
-className="w-full h-[200px] sm:h-[230px] md:h-[260px] object-cover rounded-[14px]"
+className="w-full h-[220px] md:h-[260px] object-cover rounded-[14px]"
 />
 
-<span className="absolute top-[0px] left-[12px] text-[10px] md:text-[11px] px-[9px] py-[3px] bg-black/70 text-white rounded-sm uppercase tracking-wider">
-HONEYMOON {section.tag}
+<span
+  className="absolute top-[0px] left-[12px] text-[10px] md:text-[11px] px-[10px] py-[4px] text-white rounded-sm uppercase tracking-wider"
+  style={{ background: post.btn, opacity: 0.85 }}
+>
+  HONEYMOON {section.tag}
 </span>
 
 <button
@@ -100,6 +106,7 @@ e.stopPropagation()
 setBookmark(prev=>({...prev,[id]:!prev[id]}))
 }}
 className="absolute -top-3 -right-3 w-[32px] h-[32px] md:w-[36px] md:h-[36px] bg-white rounded-full flex items-center justify-center border border-red-200 text-red-600 shadow-md"
+
 >
 
 {bookmark[id] ? <FaBookmark size={14}/> : <FaRegBookmark size={14}/>}
@@ -114,15 +121,17 @@ style={{fontFamily:"Yeseva One"}}
 >
 {post.title}
 </h3>
-
-<button className="group mt-[14px] md:mt-[18px] px-[16px] py-[7px] text-[14px] md:text-[16px] font-semibold rounded-full border border-red hover:border-red-500 transition flex items-center gap-[6px]">
-
+<button
+className="mt-[18px] ml-auto px-[22px] py-[10px] text-[13px] font-semibold rounded-full flex items-center gap-[8px] text-white border border-transparent transition-all duration-300  group-hover:border-red-500 hover:bg-red hover:border-red-500"
+style={{ background: post.btn }}
+>
 READ MORE
 
-<span className="rotate-[-45deg] group-hover:rotate-0 transition-transform duration-300">→</span>
+<span className="rotate-[-45deg] group-hover:rotate-0 transition-transform duration-300">
+→
+</span>
 
 </button>
-
 </div>
 
 )

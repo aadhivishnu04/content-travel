@@ -1,28 +1,65 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaRegBookmark, FaBookmark } from "react-icons/fa";
+
 import img1 from "../assets/image1.jpg";
+import img2 from "../assets/image2.jpg";
+import img3 from "../assets/image3.jpg";
 
 export default function Banner() {
+
   const [bookmark, setBookmark] = useState(false);
+  const [active, setActive] = useState(0);
+
+  const slides = [
+    {
+      image: img1,
+      title: "30 Best Places to Visit in India in March 2026 | Travel Rethink Ways",
+      tag: "INDIA 2026",
+    },
+    {
+      image: img2,
+      title: "Top 10 Family Friendly Destinations in India | Travel Rethink Ways",
+      tag: "FAMILY GETAWAYS",
+    },
+    {
+      image: img3,
+      title: "Best Romantic Honeymoon Places in India 2026 | Travel Rethink Ways",
+      tag: "HONEYMOON GLOBAL",
+    },
+  ];
+
+  // AUTO SLIDE
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActive((prev) => (prev + 1) % slides.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="w-full md:max-w-[1204px] md:mx-auto px-0 md:px-3 lg:px-4 my-0 md:my-6">
 
       <div className="relative h-[515px] md:h-[460px] lg:h-[540px] overflow-hidden rounded-none md:rounded-[16px] group shadow-lg">
 
-        {/* IMAGE */}
-        <img
-          src={img1}
-          alt="banner"
-          className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-        />
+        {/* SLIDES */}
+        {slides.map((slide, index) => (
+          <img
+            key={index}
+            src={slide.image}
+            alt="banner"
+            className={`absolute inset-0 w-full h-full object-cover brightness-[0.85] transition-opacity duration-700 ${
+              index === active ? "opacity-100" : "opacity-0"
+            }`}
+          />
+        ))}
 
-        {/* DESKTOP OVERLAY */}
-        <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent"></div>
+        {/* OVERLAY */}
+        <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-black/0"></div>
 
         {/* TAG */}
-        <span className="absolute top-3 left-4 md:left-10 bg-red-600 text-white text-[10px] sm:text-[11px] font-semibold uppercase px-2 py-1 rounded">
-          INDIA 2026
+        <span className="absolute top-0 left-4 md:left-10 bg-red-600 text-white text-[10px] sm:text-[11px] font-semibold uppercase px-2 py-1 rounded">
+          {slides[active].tag}
         </span>
 
         {/* BOOKMARK */}
@@ -36,8 +73,8 @@ export default function Banner() {
         {/* DESKTOP TEXT */}
         <div className="hidden md:block absolute left-10 top-1/2 -translate-y-1/2 max-w-[600px] text-white">
 
-          <h1 className="text-[30px] lg:text-[36px] leading-[1.3] mb-4 font-['Yeseva_One']">
-            30 Best Places to Visit in India in March 2026 | Travel Rethink Ways
+          <h1 className="text-[36px] lg:text-[36px] leading-[1.25] mb-5 font-['Yeseva_One'] max-w-[620px]">
+            {slides[active].title}
           </h1>
 
           
@@ -51,26 +88,39 @@ export default function Banner() {
 
           </button>
 
+        </div>
+
+        {/* DOTS NAVIGATION */}
+        <div className="hidden md:flex flex-col gap-3 absolute right-5 top-1/2 -translate-y-1/2">
+
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setActive(index)}
+              className={`w-[10px] h-[10px] rounded-full border border-white ${
+                active === index ? "bg-white" : "bg-transparent"
+              }`}
+            />
+          ))}
 
         </div>
 
         {/* MOBILE CAPTION */}
         <div className="absolute bottom-0 left-0 w-full md:hidden bg-[#5a3a4d] text-white px-4 pt-10 pb-4">
 
-          
-   {/* MOBILE BUTTON */}
-<button className="absolute bottom-[120px] right-4 md:hidden flex items-center gap-2 px-[14px] py-[6px] rounded-full border border-white/70 text-white text-[12px] bg-[#4a2f4a]/80 backdrop-blur-sm">
+          {/* MOBILE BUTTON */}
+          <button className="absolute bottom-[120px] right-4 flex items-center gap-2 px-[14px] py-[6px] rounded-full border border-white/70 text-white text-[12px] bg-[#4a2f4a]/80 backdrop-blur-sm">
 
-  READ MORE
+            READ MORE
 
-  <span className="inline-block -rotate-[35deg]">
-    ➜
-  </span>
+            <span className="inline-block -rotate-[35deg]">
+              ➜
+            </span>
 
-</button>
+          </button>
 
           <h1 className="text-[18px] leading-[1] font-['Yeseva_One']">
-            30 Best Places to Visit in India in March 2026 | Travel Rethink Ways
+            {slides[active].title}
           </h1>
 
         </div>

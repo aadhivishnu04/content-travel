@@ -18,9 +18,9 @@ function App() {
     <div>
       <Banner />
       <Tags />
-      <AdBanner />
+      {/* <AdBanner /> */}
       <Honeymooncard />
-       <AdBanner />
+       {/* <AdBanner />
        <Brandstory />
        <Month/>
        <AdBanner />
@@ -32,7 +32,7 @@ function App() {
        <AdBanner />
        <LatestUpdates/>
        <TravelMood/>
-       <AdBanner />
+       <AdBanner /> */}
     </div>
   );
 }
