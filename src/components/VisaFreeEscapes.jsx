@@ -49,7 +49,7 @@ export default function VisaFreeEscapes() {
 
           {/* TAG */}
 
-          <span className="absolute top-6 left-6 bg-[#3f4c60] text-white text-[10px] px-3 py-1 rounded">
+          <span className="absolute top-0 left-6 bg-[#3f4c60] text-white text-[10px] px-3 py-1 rounded">
             VISA-FREE
           </span>
 

@@ -42,7 +42,7 @@ className="w-full h-[420px] object-cover"
 
 {/* TAG */}
 
-<span className="absolute top-4 left-4 bg-red-500 text-white text-[10px] px-2 py-1 rounded">
+<span className="absolute top-0 left-4 bg-red-500 text-white text-[10px] px-2 py-1 rounded">
 VISA-PROCESS
 </span>
 

@@ -71,7 +71,7 @@ export default function LatestUpdates() {
             className="rounded-[16px] w-full h-[330px] object-cover"
           />
 
-          <span className="absolute top-4 left-4 bg-red-500 text-white text-[10px] px-2 py-1 rounded">
+          <span className="absolute top-0 left-4 bg-red-500 text-white text-[10px] px-2 py-1 rounded">
             WILDLIFE
           </span>
 

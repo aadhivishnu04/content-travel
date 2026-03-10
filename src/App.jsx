@@ -18,6 +18,7 @@ function App() {
     <div>
       <Banner />
       <Tags />
+      <AdBanner />
       <Honeymooncard />
        <AdBanner />
        <Brandstory />

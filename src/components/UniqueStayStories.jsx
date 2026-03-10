@@ -38,7 +38,7 @@ VIEW ALL →
 
 {/* TAG */}
 
-<span className="absolute top-6 left-6 bg-purple-600 text-white text-[10px] px-2 py-1 rounded">
+<span className="absolute top-0 left-6 bg-purple-600 text-white text-[10px] px-2 py-1 rounded">
 UNIQUE STAYS
 </span>
 
