@@ -1,107 +1,73 @@
-import { useState } from "react";
-import { FaRegBookmark, FaBookmark } from "react-icons/fa";
-import img from "../assets/rethinkways-blog-boutique-kerala-cover.jpg";
+import poolImg from "../assets/rethinkways-blog-boutique-kerala-cover.jpg";
+import { FaRegBookmark } from "react-icons/fa";
 
-export default function UniqueStayStories() {
+export default function UniqueStay() {
+  return (
+    <section className="max-w-[1320px] mx-auto mt-[60px]">
 
-const [bookmark,setBookmark] = useState(false)
+      {/* Header */}
+      <div className="flex items-center justify-between mb-[25px]">
+        <div className="flex items-center gap-3">
+          <div className="w-[3px] h-[26px] bg-red-700"></div>
+<h2 className="text-[36px] font-normal font-[Poppins]">Unique Stay Stories</h2>
+        </div>
 
-return (
+         <button className="group flex items-center gap-2 px-[20px] py-[9px] text-[13px] font-semibold rounded-full bg-red-600 text-white border-2 border-red-600 hover:bg-black transition-all duration-300">
+          VIEW ALL
+          <span className="rotate-[-45deg] group-hover:rotate-0 transition-transform duration-300">
+            →
+          </span>
+        </button>
+      </div>
 
-<section className="max-w-[1204px] mx-auto px-4 my-10">
+      {/* Card */}
+      <div className="relative rounded-[10px] overflow-hidden group">
 
-{/* HEADER */}
+        {/* Image */}
+        <img
+          src={poolImg}
+          className="w-full h-[540px] object-cover"
+          alt="Kerala Pool"
+        />
 
-<div className="flex items-center justify-between mb-6">
+        {/* Bookmark */}
+        <div className="absolute top-[16px] right-[16px] w-[36px] h-[36px] bg-white rounded-full flex items-center justify-center shadow">
+          <FaRegBookmark className="text-red-600 text-[14px]" />
+        </div>
 
-<div className="flex items-center gap-3">
-<div className="w-[3px] h-[26px] bg-red-500"></div>
-<h2 className="text-[22px] font-semibold">
-Unique Stay Stories
-</h2>
-</div>
+        {/* Left Content Card */}
+       <div className="absolute left-[100px] top-[0px] w-[528px] bg-[#F1E4FF] p-[32px] rounded-[10px] ">
 
-<button className="bg-red-500 text-white text-sm px-4 py-2 rounded-full">
-VIEW ALL →
-</button>
-
-</div>
-
-
-{/* CARD */}
-
-<div className="flex rounded-[18px] overflow-hidden shadow-sm">
-
-{/* LEFT PANEL */}
-
-<div className="w-[38%] bg-[#d9cbe8] p-10 flex flex-col justify-center relative">
-
-{/* TAG */}
-
-<span className="absolute top-0 left-6 bg-purple-600 text-white text-[10px] px-2 py-1 rounded">
-UNIQUE STAYS
+  {/* Tag */}
+<span className="absolute top-[0px] left-[32px] bg-[#5b3dbb] text-white text-[11px] px-[12px] py-[4px] uppercase font-semibold rounded-[3px]">
+  UNIQUE STAYS
 </span>
 
-
-{/* TITLE */}
-
-<h3 className="font-serif text-[30px] leading-tight mb-4">
-
-10 Boutique Hotels in Kerala Where Nature
-Meets Timeless Charm
-
+  {/* Heading */}
+  <h3 className="font-['Yeseva_One'] text-[40px] leading-[48px] text-black mt-[18px]">
+  10 Boutique Hotels in Kerala Nature Meets Timeless Charm...
 </h3>
 
-
-{/* TEXT */}
-
-<p className="text-gray-600 text-sm mb-6">
-
-Kerala, often called God's Own Country,
-is more than a destination — it's an emotion.
-
+  {/* Paragraph */}
+ <p className="font-[Poppins] text-[18px] leading-[28px] text-gray-700 mt-[20px] max-w-[420px]">
+  Kerala, often called God’s Own Country, is more than a destination
+  it’s an emotion. A place misty hills meet...
 </p>
 
 
-{/* BUTTON */}
+  {/* Button */}
+<button className="mt-[24px] ml-[300px] flex items-center gap-2 px-[24px] py-[11px] bg-[#5b3dbb] text-white text-[14px] font-semibold rounded-full border-2 border-transparent group-hover:bg-black group-hover:border-red-600 transition-all duration-300">
 
-<button className="bg-purple-600 text-white px-5 py-2 rounded-full text-sm w-fit hover:bg-black transition">
+  READ MORE
 
-READ MORE →
-
-</button>
-
-</div>
-
-
-{/* IMAGE */}
-
-<div className="w-[62%] relative">
-
-<img
-src={img}
-alt=""
-className="w-full h-[380px] object-cover"
-/>
-
-
-{/* BOOKMARK */}
-
-<button
-onClick={()=>setBookmark(!bookmark)}
-className="absolute top-5 right-5 w-9 h-9 bg-white rounded-full flex items-center justify-center text-red-500 shadow"
->
-
-{bookmark ? <FaBookmark/> : <FaRegBookmark/>}
+  <span className="-rotate-[35deg] group-hover:rotate-0 transition-transform duration-300">
+    →
+  </span>
 
 </button>
-
 </div>
 
-</div>
-
-</section>
-
-)
-
+      </div>
+    </section>
+  );
 }

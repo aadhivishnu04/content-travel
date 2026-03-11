@@ -121,7 +121,7 @@ style={{fontFamily:"Yeseva One"}}
 {post.title}
 </h3>
 <button
-className="mt-[18px] ml-auto px-[22px] py-[10px] text-[13px] font-semibold rounded-full flex items-center gap-[8px] text-white border border-transparent transition-all duration-300  group-hover:border-red-500 hover:bg-red hover:border-red-500"
+className="mt-[18px] ml-auto px-[22px] py-[10px] text-[13px] font-semibold rounded-full flex items-center gap-[8px] text-white border border-transparent transition-all duration-300 group-hover:border-red-500 group-hover:bg-black"
 style={{ background: post.btn }}
 >
 READ MORE

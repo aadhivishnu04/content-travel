@@ -1,105 +1,74 @@
-import { useState } from "react";
-import { FaRegBookmark, FaBookmark } from "react-icons/fa";
-import img from "../assets/india.jpg";
 
-export default function ExperienceSection() {
+import indiaImage from "../assets/india.jpg";
+import { FaRegBookmark } from "react-icons/fa";
 
-const [bookmark,setBookmark] = useState(false)
+export default function ExperienceIndia() {
+  return (
+    <section className="max-w-[1320px] mx-auto mt-[60px]">
 
-return (
+      {/* Header */}
+      <div className="flex items-center justify-between mb-[30px]">
 
-<section className="max-w-[1204px] mx-auto px-4 my-10">
+        <div className="flex items-center gap-3">
+          <div className="w-[3px] h-[32px] bg-red-600"></div>
 
-{/* HEADER */}
+          <h2 className="text-[36px] font-normal font-[Poppins]">
+            Experience India by Month 2026
+          </h2>
+        </div>
 
-<div className="flex items-center justify-between mb-6">
+        <button className="group flex items-center gap-2 px-[20px] py-[9px] text-[13px] font-semibold rounded-full bg-red-600 text-white border-2 border-red-600 hover:bg-black transition-all duration-300">
+          VIEW ALL
+          <span className="rotate-[-45deg] group-hover:rotate-0 transition-transform duration-300">
+            →
+          </span>
+        </button>
 
-<div className="flex items-center gap-3">
-<div className="w-[3px] h-[26px] bg-red-500"></div>
-<h2 className="text-[22px] font-semibold">
-Experience India by Month 2026
-</h2>
-</div>
+      </div>
 
-<button className="bg-red-500 text-white text-sm px-4 py-2 rounded-full">
-VIEW ALL →
-</button>
+      {/* Card */}
+      <div className="grid grid-cols-[65%_35%] rounded-[14px] overflow-hidden group">
 
-</div>
+        {/* Left Image */}
+        <img
+          src={indiaImage}
+          alt="India April"
+          className="w-[858px] h-[540px] object-cover"
+        />
 
+        {/* Right Content */}
+      <div className="bg-[#c2e5df] px-[40px] pt-[36px] pb-[34px] relative flex flex-col">
 
-{/* CARD */}
+          {/* Tag */}
+          <span className="absolute top-[1px] left-[18px] text-[11px] px-3 py-1 bg-[#244B46] text-white uppercase font-semibold">
+            INDIA 2026
+          </span>
 
-<div className="flex rounded-[14px] overflow-hidden shadow-sm">
+          {/* Bookmark */}
+          <div className="absolute top-[18px] right-[18px] w-[36px] h-[36px] bg-white rounded-full flex items-center justify-center shadow">
+            <FaRegBookmark className="text-red-600 text-[14px]" />
+          </div>
 
-{/* IMAGE */}
-
-<div className="w-[65%]">
-<img
-src={img}
-alt=""
-className="w-full h-[360px] object-cover"
-/>
-</div>
-
-
-{/* RIGHT PANEL */}
-
-<div className="w-[35%] bg-[#a7c2bc] p-8 relative flex flex-col justify-center">
-
-{/* TAG */}
-
-<span className="absolute top-0 left-4 bg-[#244b45] text-white text-[10px] px-2 py-1 rounded">
-INDIA 2026
-</span>
-
-
-{/* BOOKMARK */}
-
-<button
-onClick={()=>setBookmark(!bookmark)}
-className="absolute top-4 right-4 w-8 h-8 bg-white rounded-full flex items-center justify-center text-red-500"
->
-
-{bookmark ? <FaBookmark/> : <FaRegBookmark/>}
-
-</button>
-
-
-{/* TITLE */}
-
-<h3 className="font-serif text-[26px] leading-tight mb-4">
-
-30 Best Places to Visit in April in India 2026 |
-Travel Rethink Ways
-
+          {/* Title */}
+          <h3 className="font-['Yeseva_One'] text-[36px] leading-[44px] mt-[38px] tracking-[0.2px] text-black max-w-[420px]">
+  30 Best Places to Visit in April in India 2026 | Travel Rethink Ways
 </h3>
-
-
-{/* DESCRIPTION */}
-
-<p className="text-sm text-gray-700 mb-6">
-
-April marks the beginning of summer in India but several
-destinations still offer pleasant weather.
-
+          {/* Description */}
+       <p className="text-[16px] leading-[28px] text-[#2f2f2f] mt-[80px] max-w-[380px] font-[Poppins] font-normal">
+  April marks the beginning of summer in India but several destinations still offer...
 </p>
+          {/* Button */}
+             <button className="mt-auto self-start ml-[230px] relative -top-[40px] flex items-center gap-2 px-[22px] py-[10px] bg-[#244B46] text-white rounded-full border-2 border-[#244B46] text-[14px] font-semibold group-hover:bg-black group-hover:border-red-600 transition-all duration-300">              
+            READ MORE
+            <span className="-rotate-[35deg] group-hover:rotate-0 transition-transform duration-300">
+              →
+            </span>
+          </button>
 
+        </div>
 
-{/* BUTTON */}
-
-<button className="bg-[#244b45] text-white px-5 py-2 rounded-full text-sm w-fit hover:bg-black transition">
-
-READ MORE →
-
-</button>
-
-</div>
-
-</div>
-
-</section>
-
-)
-
+      </div>
+    </section>
+  );
 }
+

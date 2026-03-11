@@ -20,17 +20,17 @@ function App() {
       <Tags />
       {/* <AdBanner /> */}
       <Honeymooncard />
+      <Brandstory />
+      <Month/>
+      <Visacard/>
+      <UniqueStayStories/>
+      <AroundTheWorld/>
+      <VisaFreeEscapes/>
+      <LatestUpdates/>
        {/* <AdBanner />
-       <Brandstory />
-       <Month/>
        <AdBanner />
-       <Visacard/>
-        <UniqueStayStories/>
        <AdBanner />
-        <AroundTheWorld/>
-        <VisaFreeEscapes/>
        <AdBanner />
-       <LatestUpdates/>
        <TravelMood/>
        <AdBanner /> */}
     </div>

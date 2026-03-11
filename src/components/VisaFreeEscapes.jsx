@@ -7,22 +7,24 @@ export default function VisaFreeEscapes() {
   const [bookmark, setBookmark] = useState(false);
 
   return (
-    <section className="max-w-[1204px] mx-auto px-4 my-12">
+    <section className="max-w-[1320px] mx-auto px-4 my-10">
 
       {/* HEADER */}
 
       <div className="flex items-center justify-between mb-6">
 
         <div className="flex items-center gap-3">
-          <div className="w-[3px] h-[26px] bg-red-500"></div>
-
-          <h2 className="text-[22px] font-semibold">
+                  <div className="w-[3px] h-[26px] bg-red-700"></div>
+<h2 className="text-[36px] font-normal font-[Poppins]">
             VISA-Free Escapes
           </h2>
         </div>
 
-        <button className="bg-red-500 text-white text-sm px-5 py-2 rounded-full">
-          VIEW ALL →
+      <button className="group flex items-center gap-2 px-[20px] py-[9px] text-[13px] font-semibold rounded-full bg-red-600 text-white border-2 border-red-600 hover:bg-black transition-all duration-300">
+          VIEW ALL
+          <span className="rotate-[-45deg] group-hover:rotate-0 transition-transform duration-300">
+            →
+          </span>
         </button>
 
       </div>
@@ -30,7 +32,7 @@ export default function VisaFreeEscapes() {
 
       {/* CARD */}
 
-      <div className="flex rounded-[18px] overflow-hidden shadow-sm">
+      <div className="flex rounded-[18px] overflow-hidden shadow-sm group">
 
         {/* LEFT IMAGE */}
 
@@ -38,14 +40,14 @@ export default function VisaFreeEscapes() {
           <img
             src={img}
             alt="visa free"
-            className="w-full h-[420px] object-cover"
+            className="w-full h-[540px] object-cover"
           />
         </div>
 
 
         {/* RIGHT CONTENT */}
 
-        <div className="w-[42%] bg-[#aeb9c8] p-12 relative flex flex-col justify-center">
+        <div className="w-[42%] bg-[#aeb9c8] p-12 relative flex flex-col justify-center group">
 
           {/* TAG */}
 
@@ -66,7 +68,7 @@ export default function VisaFreeEscapes() {
 
           {/* TITLE */}
 
-          <h3 className="font-serif text-[32px] leading-tight mb-5">
+          <h3 className="font-['Yeseva_One'] text-[36px] leading-tight mb-5">
 
             Top 10 Exotic VISA Free Honeymoon
             Destinations for Indians 2026 Romantic
@@ -77,7 +79,7 @@ export default function VisaFreeEscapes() {
 
           {/* DESCRIPTION */}
 
-          <p className="text-gray-700 text-sm mb-8">
+          <p className="font-[Poppins] text-gray-700 text-sm mb-8">
 
             Planning a honeymoon should be exciting,
             not stressful. Yet VISA paperwork often
@@ -88,12 +90,17 @@ export default function VisaFreeEscapes() {
 
           {/* BUTTON */}
 
-          <button className="bg-black text-white px-6 py-2 rounded-full border-2 border-red-500 w-fit text-sm hover:bg-red-500 transition">
+<button
+className="mt-[20px] ml-auto flex items-center gap-[8px] px-[22px] py-[10px] text-[13px] font-semibold rounded-full bg-[#2f3e4f] text-white border border-transparent transition-all duration-300 group-hover:bg-black group-hover:border-red-500"
+>
 
-            READ MORE →
+READ MORE
 
-          </button>
+<span className="rotate-[-45deg] group-hover:rotate-0 transition-transform duration-300">
+→
+</span>
 
+</button>     
         </div>
 
       </div>

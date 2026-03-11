@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { FaRegBookmark, FaBookmark } from "react-icons/fa";
 
-import heroImg from "../assets/zebra.jpg";
+import heroImg from "../assets/horse.jpg";
 import card1 from "../assets/visa.jpg";
-import card2 from "../assets/pool.jpg";
-import card3 from "../assets/beach.jpg";
+import card2 from "../assets/secondcard2.jpg";
+import card3 from "../assets/thirdcard3.jpg";
 
 export default function LatestUpdates() {
 
@@ -36,7 +36,7 @@ export default function LatestUpdates() {
   ];
 
   return (
-    <section className="max-w-[1204px] mx-auto px-4 my-14">
+    <section className="max-w-[1320px] mx-auto px-4 my-14">
 
       {/* HEADER */}
 
@@ -68,7 +68,7 @@ export default function LatestUpdates() {
           <img
             src={heroImg}
             alt=""
-            className="rounded-[16px] w-full h-[330px] object-cover"
+            className="rounded-[16px] w-[660] h-[471px] object-cover"
           />
 
           <span className="absolute top-0 left-4 bg-red-500 text-white text-[10px] px-2 py-1 rounded">
@@ -89,7 +89,7 @@ export default function LatestUpdates() {
 
         <div className="w-[52%] flex flex-col justify-center">
 
-          <h3 className="font-serif text-[30px] leading-tight mb-4">
+         <h3 className="font-['Yeseva_One'] text-[30px] leading-[38px] text-[#0D1317]">
 
             The Wild Splendor of India: 15 Breathtaking
             Forests, Wildlife & Untamed Landscapes |
@@ -97,7 +97,7 @@ export default function LatestUpdates() {
 
           </h3>
 
-          <p className="text-gray-600 text-sm mb-6">
+         <p className="font-[Poppins] text-[22px] leading-[26px] text-[#5B5F62] mt-[14px]">
 
             India is not just monuments and megacities.
             The Wild Splendor of India unfolds far beyond
@@ -105,9 +105,16 @@ export default function LatestUpdates() {
 
           </p>
 
-          <button className="bg-red-500 text-white px-6 py-2 rounded-full w-fit text-sm hover:bg-black transition">
-            READ MORE →
-          </button>
+   <button className="mt-[18px] ml-auto bg-red-500 text-white px-[22px] py-[10px] rounded-full text-[13px] font-semibold flex items-center gap-2 group hover:bg-black transition-all duration-300">
+    
+    READ MORE
+
+    <span className="rotate-[-45deg] group-hover:rotate-0 transition-transform duration-300">
+      →
+    </span>
+
+  </button>
+
 
         </div>
 
@@ -116,26 +123,26 @@ export default function LatestUpdates() {
 
       {/* CARD GRID */}
 
-      <div className="grid grid-cols-3 gap-6">
+      <div className="grid grid-cols-3 gap-[40px] items-center">
 
         {cards.map((card, index) => (
 
           <div
             key={index}
-            className="border rounded-[14px] p-4 hover:shadow-sm transition"
+            className="border border-[#EDEDED]  rounded-[14px] group p-4 hover:shadow-sm transition"
           >
 
             {/* IMAGE */}
 
-            <div className="relative mb-4">
+            <div className=" relative mb-4  ">
 
               <img
                 src={card.img}
                 alt=""
-                className="rounded-[12px] w-full h-[200px] object-cover"
+                className="rounded-[12px] w-[377] h-[350px] object-cover"
               />
 
-              <span className="absolute top-3 left-3 bg-red-500 text-white text-[10px] px-2 py-1 rounded">
+              <span className="absolute top-0 left-3 bg-red-500 text-white text-[10px] px-2 py-1 rounded">
                 {card.tag}
               </span>
 
@@ -151,19 +158,22 @@ export default function LatestUpdates() {
 
             {/* TITLE */}
 
-            <h4 className="font-serif text-[18px] mb-4 leading-snug">
-
-              {card.title}
-
-            </h4>
+            <h4 className="font-['Yeseva_One'] text-[22px] leading-[30px] text-[#0D1317] mb-3">
+  {card.title}
+</h4>
 
 
             {/* BUTTON */}
 
-            <button className="bg-red-500 text-white px-5 py-2 rounded-full text-xs">
-              READ MORE →
-            </button>
+<button className="ml-auto px-[22px] py-[10px] rounded-full text-[13px] font-semibold flex items-center gap-2 bg-red-500 text-white border border-transparent transition-all duration-300 group-hover:bg-black group-hover:border-red-500">
 
+READ MORE
+
+<span className="rotate-[-45deg] group-hover:rotate-0 transition-transform duration-300">
+→
+</span>
+
+</button>
           </div>
 
         ))}
