@@ -52,24 +52,23 @@ const moods = [
 
 return (
 
-<section className="max-w-[1204px] mx-auto px-4 my-12">
+<section className="max-w-[1320px] mx-auto px-4 my-10 md:my-12">
 
 {/* HEADER */}
 
-<div className="flex items-center gap-3 mb-8">
+<div className="flex items-center gap-3 mb-6 md:mb-8">
 
-<div className="w-[3px] h-[26px] bg-red-500"></div>
+<div className="w-[3px] h-[24px] md:h-[26px] bg-red-700"></div>
 
-<h2 className="text-[24px] font-semibold">
+<h2 className="text-[20px] md:text-[36px] font-normal font-[Poppins]">
 What’s Your Travel Mood?
 </h2>
 
 </div>
 
-
 {/* GRID */}
 
-<div className="grid grid-cols-4 gap-6">
+<div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
 
 {moods.map((item,i)=>(
 
@@ -80,31 +79,24 @@ className="relative rounded-[14px] overflow-hidden group cursor-pointer transiti
 
 <img
 src={item.img}
-className="w-full h-[240px] object-cover group-hover:scale-105 transition duration-500"
+className="w-full h-[220px] md:h-[320px] object-cover group-hover:scale-105 transition duration-500"
 />
-
-{/* DARK OVERLAY */}
-
-<div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-
 
 {/* TITLE */}
 
-<h3 className="absolute bottom-4 left-4 text-white text-sm font-medium">
-
+<h3 className="absolute bottom-3 left-3 md:bottom-4 md:left-4 text-white text-[13px] md:text-[19px] font-medium font-[Poppins]">
 {item.title}
-
 </h3>
 
-
 {/* BUTTON */}
-<button className="absolute bottom-3 right-3 flex items-center gap-1 bg-white text-black text-xs px-3 py-1 rounded-full transition-all duration-300 group-hover:bg-black group-hover:text-white">
 
-  View All
+<button className="absolute bottom-3 right-3 md:bottom-4 md:right-4 flex items-center gap-1 bg-white text-black text-[11px] md:text-[14px] px-3 md:px-4 py-[5px] md:py-[6px] rounded-full font-medium shadow-sm transition-all duration-300">
 
-  <span className="inline-block transition-transform duration-300 rotate-45 group-hover:rotate-0 group-hover:translate-x-1">
-    →
-  </span>
+View All
+
+<span className="inline-block transform -rotate-45 transition-transform duration-300 group-hover:rotate-0 group-hover:translate-x-1">
+→
+</span>
 
 </button>
 

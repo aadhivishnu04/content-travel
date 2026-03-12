@@ -7,7 +7,7 @@ const tags = [
 { icon:<Fa.FaUtensils/>, text:"Culinary", bg:"#fff4e5", color:"#87541b" },
 { icon:<Fa.FaBed/>, text:"Unique Stays", bg:"#dcfaec", color:"#145c43" },
 { icon:<Fa.FaShip/>, text:"Cruises", bg:"#d8fbf2", color:"#0f6656" },
-{ icon:<Fa.FaBookOpen/>, text:"Travel Stories", bg:"#dbf2ff", color:"#155a82 " },
+{ icon:<Fa.FaBookOpen/>, text:"Travel Stories", bg:"#dbf2ff", color:"#155a82" },
 { icon:<Fa.FaStar/>, text:"Attractions", bg:"#e2e7ff", color:"#2e3a86" },
 
 { icon:<Fa.FaHeart/>, text:"Honeymoon – India", bg:"#eae3ff", color:"#563392" },
@@ -47,23 +47,29 @@ const tags = [
 ];
 
 export default function Tags(){
-  return (
-    <div className="w-full max-w-[1352px] mx-auto px-3 sm:px-4 md:px-6 my-[0px 0px 12px] flex flex-wrap gap-[10px] sm:gap-[12px] md:gap-[14px] font-[Poppins]">
+return (
 
-      {tags.map(({icon,text,bg,color},i)=>(
-        <div
-          key={i}
-          className="flex items-center gap-[6px] sm:gap-[8px] px-[10px] py-[8px] sm:px-[12px] sm:py-[10px] rounded-[10px] text-[14px] sm:text-[16px] md:text-[16px] lg:text-[20px] font-medium cursor-pointer transition-all duration-200"
-          style={{ background: bg, color }}
-        >
-          <span className="text-[15px] sm:text-[16px]">
-            {icon}
-          </span>
+<div className="w-full max-w-[1352px] mx-auto px-4 mt-8 sm:mt-10 md:mt-12 flex flex-wrap justify-center sm:justify-start gap-[8px] sm:gap-[12px] md:gap-[14px] font-[Poppins]">
 
-          {text}
-        </div>
-      ))}
+{tags.map(({icon,text,bg,color},i)=>(
 
-    </div>
-  );
+<div
+key={i}
+className="flex items-center gap-[6px] sm:gap-[8px] px-[10px] py-[6px] sm:px-[12px] sm:py-[10px] rounded-[10px] text-[13px] sm:text-[16px] md:text-[16px] lg:text-[20px] font-medium cursor-pointer transition-all duration-200"
+style={{ background: bg, color }}
+>
+
+<span className="text-[14px] sm:text-[16px]">
+{icon}
+</span>
+
+{text}
+
+</div>
+
+))}
+
+</div>
+
+);
 }

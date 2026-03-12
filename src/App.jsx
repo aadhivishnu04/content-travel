@@ -27,11 +27,11 @@ function App() {
       <AroundTheWorld/>
       <VisaFreeEscapes/>
       <LatestUpdates/>
+      <TravelMood/>
        {/* <AdBanner />
        <AdBanner />
        <AdBanner />
        <AdBanner />
-       <TravelMood/>
        <AdBanner /> */}
     </div>
   );

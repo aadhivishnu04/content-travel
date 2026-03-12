@@ -1,74 +1,102 @@
-
+import { useState } from "react";
 import indiaImage from "../assets/india.jpg";
-import { FaRegBookmark } from "react-icons/fa";
+import { FaRegBookmark, FaBookmark } from "react-icons/fa";
 
 export default function ExperienceIndia() {
-  return (
-    <section className="max-w-[1320px] mx-auto mt-[60px]">
 
-      {/* Header */}
-      <div className="flex items-center justify-between mb-[30px]">
+const [bookmark,setBookmark] = useState(false)
 
-        <div className="flex items-center gap-3">
-          <div className="w-[3px] h-[32px] bg-red-600"></div>
+return (
 
-          <h2 className="text-[36px] font-normal font-[Poppins]">
-            Experience India by Month 2026
-          </h2>
-        </div>
+<section className="w-full md:max-w-[1320px] mx-auto mt-[40px] md:mt-[60px] px-0 md:px-4">
 
-        <button className="group flex items-center gap-2 px-[20px] py-[9px] text-[13px] font-semibold rounded-full bg-red-600 text-white border-2 border-red-600 hover:bg-black transition-all duration-300">
-          VIEW ALL
-          <span className="rotate-[-45deg] group-hover:rotate-0 transition-transform duration-300">
-            →
-          </span>
-        </button>
+{/* Header */}
 
-      </div>
+<div className="flex items-center justify-between mb-[20px] md:mb-[30px]">
 
-      {/* Card */}
-      <div className="grid grid-cols-[65%_35%] rounded-[14px] overflow-hidden group">
+<div className="flex items-center gap-3">
+<div className="w-[3px] h-[26px] md:h-[32px] bg-red-600"></div>
 
-        {/* Left Image */}
-        <img
-          src={indiaImage}
-          alt="India April"
-          className="w-[858px] h-[540px] object-cover"
-        />
+<h2 className="text-[20px] md:text-[36px] font-normal font-[Poppins]">
+Experience India by Month 2026
+</h2>
+</div>
 
-        {/* Right Content */}
-      <div className="bg-[#c2e5df] px-[40px] pt-[36px] pb-[34px] relative flex flex-col">
+<button className="group w-[36px] h-[36px] md:w-auto md:h-auto flex items-center justify-center md:gap-2 px-0 md:px-[20px] py-0 md:py-[9px] text-[11px] md:text-[13px] font-semibold rounded-full bg-red-600 text-white border-2 border-red-600 hover:bg-black transition-all duration-300">
 
-          {/* Tag */}
-          <span className="absolute top-[1px] left-[18px] text-[11px] px-3 py-1 bg-[#244B46] text-white uppercase font-semibold">
-            INDIA 2026
-          </span>
+<span className="hidden md:inline">VIEW ALL</span>
 
-          {/* Bookmark */}
-          <div className="absolute top-[18px] right-[18px] w-[36px] h-[36px] bg-white rounded-full flex items-center justify-center shadow">
-            <FaRegBookmark className="text-red-600 text-[14px]" />
-          </div>
+<span className="rotate-[-45deg] group-hover:rotate-0 transition-transform duration-300">
+→
+</span>
 
-          {/* Title */}
-          <h3 className="font-['Yeseva_One'] text-[36px] leading-[44px] mt-[38px] tracking-[0.2px] text-black max-w-[420px]">
-  30 Best Places to Visit in April in India 2026 | Travel Rethink Ways
+</button>
+
+</div>
+
+{/* Card */}
+
+<div className="grid md:grid-cols-[65%_35%] rounded-[14px] overflow-hidden group">
+
+{/* IMAGE SECTION */}
+<div className="relative">
+
+<img
+src={indiaImage}
+alt="India April"
+className="w-full h-[240px] md:h-[540px] object-cover"
+/>
+
+{/* TAG */}
+<span className="absolute top-[0px] left-[12px] text-[10px] md:text-[11px] px-2 md:px-3 py-1 bg-[#244B46] text-white uppercase font-semibold">
+INDIA 2026
+</span>
+
+{/* BOOKMARK */}
+<div
+onClick={()=>setBookmark(!bookmark)}
+className="absolute top-[12px] right-[12px] md:top-[18px] md:right-[18px] w-[30px] h-[30px] md:w-[36px] md:h-[36px] bg-white rounded-full flex items-center justify-center shadow cursor-pointer"
+>
+{bookmark ? (
+<FaBookmark className="text-red-600 text-[12px] md:text-[14px]" />
+) : (
+<FaRegBookmark className="text-red-600 text-[12px] md:text-[14px]" />
+)}
+</div>
+
+{/* MOBILE READ MORE */}
+<button className="absolute bottom-[15px] right-[15px] md:hidden flex items-center gap-2 px-[14px] py-[6px] bg-[#244B46] text-white rounded-full text-[11px] font-semibold">
+READ MORE →
+</button>
+
+</div>
+
+{/* CONTENT */}
+<div className="bg-[#c2e5df] px-[18px] md:px-[40px] pt-[18px] md:pt-[36px] pb-[22px] md:pb-[34px] relative flex flex-col">
+
+{/* TITLE */}
+<h3 className="font-['Yeseva_One'] text-[15px] md:text-[36px] leading-[22px] md:leading-[44px] tracking-[0.2px] text-black md:mt-[38px] md:max-w-[420px]">
+30 Best Places to Visit in April in India 2026 | Travel Rethink Ways
 </h3>
-          {/* Description */}
-       <p className="text-[16px] leading-[28px] text-[#2f2f2f] mt-[80px] max-w-[380px] font-[Poppins] font-normal">
-  April marks the beginning of summer in India but several destinations still offer...
+
+{/* DESCRIPTION */}
+<p className="text-[14px] md:text-[16px] leading-[22px] md:leading-[28px] text-[#2f2f2f] mt-[10px] md:mt-[80px] md:max-w-[380px] font-[Poppins]">
+April marks the beginning of summer in India but several destinations still offer...
 </p>
-          {/* Button */}
-             <button className="mt-auto self-start ml-[230px] relative -top-[40px] flex items-center gap-2 px-[22px] py-[10px] bg-[#244B46] text-white rounded-full border-2 border-[#244B46] text-[14px] font-semibold group-hover:bg-black group-hover:border-red-600 transition-all duration-300">              
-            READ MORE
-            <span className="-rotate-[35deg] group-hover:rotate-0 transition-transform duration-300">
-              →
-            </span>
-          </button>
 
-        </div>
+{/* DESKTOP BUTTON */}
+<button className="hidden md:flex mt-auto self-start ml-[230px] relative -top-[40px] items-center gap-2 px-[22px] py-[10px] bg-[#244B46] text-white rounded-full border-2 border-[#244B46] text-[14px] font-semibold group-hover:bg-black group-hover:border-red-600 transition-all duration-300">
+READ MORE
+<span className="-rotate-[35deg] group-hover:rotate-0 transition-transform duration-300">
+→
+</span>
+</button>
 
-      </div>
-    </section>
-  );
+</div>
+
+</div>
+
+</section>
+
+);
 }
-
