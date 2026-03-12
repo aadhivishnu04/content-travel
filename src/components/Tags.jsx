@@ -49,7 +49,7 @@ const tags = [
 export default function Tags(){
 return (
 
-<div className="w-full max-w-[1352px] mx-auto px-4 mt-8 sm:mt-10 md:mt-12 flex flex-wrap justify-center sm:justify-start gap-[8px] sm:gap-[12px] md:gap-[14px] font-[Poppins]">
+<div className="w-full max-w-[1320px] mx-auto px-4 mt-8 sm:mt-10 md:mt-12 flex flex-wrap justify-center sm:justify-start gap-[8px] sm:gap-[12px] md:gap-[14px] font-[Poppins]">
 
 {tags.map(({icon,text,bg,color},i)=>(
 

@@ -42,7 +42,7 @@ export default function Banner() {
     <div className="w-full max-w-[420px] sm:max-w-[1352px] mx-auto px-0 sm:px-4 lg:px-6">
 
       {/* Banner Container */}
-      <div className="relative w-full h-[380px] sm:h-[480px] md:h-[560px] lg:h-[650px] overflow-hidden rounded-none md:rounded-[16px] shadow-lg group">
+      <div className="relative w-full h-[380px] sm:h-[480px] md:h-[560px] lg:h-[540px] overflow-hidden rounded-none md:rounded-[16px] shadow-lg group">
 
         {/* SLIDES */}
         {slides.map((slide, index) => (

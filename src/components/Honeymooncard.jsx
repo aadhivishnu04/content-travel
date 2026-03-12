@@ -42,7 +42,7 @@ posts:[
 
 return(
 
-<div style={{fontFamily:"Poppins"}} className="w-full max-w-[420px] sm:max-w-[1352px] mx-auto px-4 mt-[40px] sm:mt-[60px] space-y-[30px] sm:space-y-[40px] md:space-y-[60px]">
+<div style={{fontFamily:"Poppins"}} className="w-full max-w-[436px] sm:max-w-[1320px] mx-auto px-4 mt-[40px] sm:mt-[60px] space-y-[30px] sm:space-y-[40px] md:space-y-[60px]">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Yeseva+One&display=swap" rel="stylesheet"/>
 
