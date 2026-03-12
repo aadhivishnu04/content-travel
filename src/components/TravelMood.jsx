@@ -78,10 +78,10 @@ className="relative rounded-[14px] overflow-hidden group cursor-pointer transiti
 >
 
 <img
-src={item.img}
-className="w-full h-[220px] md:h-[320px] object-cover group-hover:scale-105 transition duration-500"
+  src={item.img}
+  className="w-full h-[220px] md:h-[320px] object-cover group-hover:scale-105 transition duration-500"
 />
-
+<div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
 {/* TITLE */}
 
 <h3 className="absolute bottom-3 left-3 md:bottom-4 md:left-4 text-white text-[13px] md:text-[19px] font-medium font-[Poppins]">

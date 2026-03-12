@@ -68,9 +68,8 @@ return (
     </div>
 
     {/* MOBILE READ MORE */}
-    <button className="absolute bottom-[12px] right-[12px] md:hidden flex items-center gap-2 px-[14px] py-[6px] bg-red-600 text-white rounded-full text-[11px] font-semibold">
-      READ MORE
-      <span className="-rotate-[35deg]">
+    <button className="absolute bottom-[20px] right-4 flex items-center gap-2 px-[14px] py-[6px] rounded-full border border-white/70 text-white text-[12px] bg-[RED] hover:bg-[#4a2f4a] transition">
+      READ MORE<span className="-rotate-[35deg]">
         →
       </span>
     </button>

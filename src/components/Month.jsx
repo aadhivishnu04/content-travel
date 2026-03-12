@@ -36,7 +36,7 @@ Experience India by Month 2026
 
 {/* Card */}
 
-<div className="grid md:grid-cols-[65%_35%] rounded-[14px] overflow-hidden group">
+<div className="grid md:grid-cols-[65%_35%] md:rounded-[14px] overflow-hidden group">
 
 {/* IMAGE SECTION */}
 <div className="relative">
@@ -48,7 +48,7 @@ className="w-full h-[240px] md:h-[540px] object-cover"
 />
 
 {/* TAG */}
-<span className="absolute top-[0px] left-[12px] text-[10px] md:text-[11px] px-2 md:px-3 py-1 bg-[#244B46] text-white uppercase font-semibold">
+<span className="absolute top-[0px] left-[50px] text-[10px] md:text-[11px] px-2 md:px-3 py-1 bg-[#244B46] text-white uppercase font-semibold">
 INDIA 2026
 </span>
 
@@ -65,7 +65,7 @@ className="absolute top-[12px] right-[12px] md:top-[18px] md:right-[18px] w-[30p
 </div>
 
 {/* MOBILE READ MORE */}
-<button className="absolute bottom-[15px] right-[15px] md:hidden flex items-center gap-2 px-[14px] py-[6px] bg-[#244B46] text-white rounded-full text-[11px] font-semibold">
+<button className="absolute bottom-[15px] right-4 flex items-center gap-2 px-[14px] py-[6px] rounded-full border border-white/70 text-white text-[12px] bg-[#244B46] hover:bg-[#4a2f4a] transition">
 READ MORE →
 </button>
 
@@ -85,7 +85,7 @@ April marks the beginning of summer in India but several destinations still offe
 </p>
 
 {/* DESKTOP BUTTON */}
-<button className="hidden md:flex mt-auto self-start ml-[230px] relative -top-[40px] items-center gap-2 px-[22px] py-[10px] bg-[#244B46] text-white rounded-full border-2 border-[#244B46] text-[14px] font-semibold group-hover:bg-black group-hover:border-red-600 transition-all duration-300">
+<button className="hidden md:flex mt-auto self-start ml-[230px] relative -top-[40px] items-center gap-1 px-[22px] py-[10px] bg-[#244B46] text-white rounded-full border-2 border-[#244B46] text-[14px] font-semibold whitespace-nowrap group-hover:bg-black group-hover:border-red-600 transition-all duration-300">
 READ MORE
 <span className="-rotate-[35deg] group-hover:rotate-0 transition-transform duration-300">
 →

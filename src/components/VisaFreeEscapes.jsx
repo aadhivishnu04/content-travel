@@ -34,7 +34,7 @@ return ( <section className="w-full md:max-w-[1320px] mx-auto mt-[40px] md:mt-[6
 
 
   {/* CARD */}
-  <div className="flex flex-col md:flex-row rounded-[18px] overflow-hidden shadow-sm group">
+  <div className="flex flex-col md:flex-row md:rounded-[18px] overflow-hidden shadow-sm group">
 
 
     {/* IMAGE */}
@@ -60,7 +60,9 @@ return ( <section className="w-full md:max-w-[1320px] mx-auto mt-[40px] md:mt-[6
       </button>
 
       {/* MOBILE BUTTON */}
-      <button className="absolute bottom-[12px] right-[12px] md:hidden flex items-center gap-2 px-[14px] py-[6px] text-[11px] font-semibold rounded-full bg-[#2f3e4f] text-white">
+      <button className="absolute bottom-[15px] right-4 flex items-center gap-2 px-[14px] py-[6px] rounded-full border border-white/70 text-white text-[12px] bg-[#2f3e4f] 
+
+  hover:bg-[#4a2f4a] transition">
         READ MORE →
       </button>
 
@@ -87,14 +89,14 @@ return ( <section className="w-full md:max-w-[1320px] mx-auto mt-[40px] md:mt-[6
       <h3 className="font-['Yeseva_One'] text-[16px] md:text-[36px] leading-[22px] md:leading-tight mb-3 md:mb-5">
 
         Top 10 Exotic VISA Free Honeymoon
-        Destinations for Indians 2026 Romantic
+        for Indians 2026 Romantic
         Travel Guide | Travel Rethink Ways
 
       </h3>
 
 
       {/* DESCRIPTION (desktop only) */}
-      <p className="hidden md:block font-[Poppins] text-gray-700 text-sm mb-8">
+      <p className="hidden md:block font-[Poppins] text-[15px] text-gray-700 text-sm mb-8">
 
         Planning a honeymoon should be exciting,
         not stressful. Yet VISA paperwork often

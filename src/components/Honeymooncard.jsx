@@ -52,7 +52,7 @@ return(
 
 {/* HEADER */}
 
-<div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 mb-[18px] sm:mb-[24px] md:mb-[30px]">
+<div className="flex items-center justify-between gap-3 sm:gap-4 mb-[18px] sm:mb-[24px] md:mb-[30px]">
 
 <div className="flex items-center gap-[10px]">
 
@@ -117,7 +117,7 @@ className="absolute top-[8px] right-[8px] w-[32px] h-[32px] flex items-center ju
 {/* MOBILE READ MORE */}
 
 <button
-className="absolute bottom-[10px] right-[10px] md:hidden flex items-center gap-[6px] px-[12px] py-[5px] rounded-full text-[11px] font-semibold text-white"
+className="absolute bottom-[20px] right-4 flex items-center gap-2 px-[14px] py-[6px] rounded-full border border-white/70 text-white text-[12px] bg-[#55364b] hover:bg-[#4a2f4a] transition"
 style={{ background: post.btn }}
 >
 READ MORE

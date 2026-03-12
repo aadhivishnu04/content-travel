@@ -36,7 +36,7 @@ Unique Stay Stories
 
 {/* CARD */}
 
-<div className="relative rounded-[10px] overflow-hidden group">
+<div className="relative md:rounded-[10px] overflow-hidden group">
 
 {/* IMAGE WRAPPER */}
 <div className="relative">
@@ -67,7 +67,8 @@ className="absolute top-[12px] right-[12px] md:top-[16px] md:right-[16px] w-[32p
 </div>
 
 {/* MOBILE READ MORE */}
-<button className="absolute bottom-[12px] right-[12px] md:hidden flex items-center gap-2 px-3 py-1 rounded-full bg-[#5b3dbb] text-white text-[11px] font-semibold">
+<button className="absolute bottom-[15px] right-4 flex items-center gap-2 px-[14px] py-[6px] rounded-full border border-white/70 text-white text-[12px] bg-[#5b3dbb]
+  hover:bg-[#4a2f4a] transition">
 READ MORE →
 </button>
 

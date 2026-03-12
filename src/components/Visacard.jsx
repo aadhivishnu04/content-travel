@@ -9,7 +9,7 @@ const [bookmark, setBookmark] = useState(false);
 return (
 
 
-<section className="w-full md:max-w-[1320px] mx-auto px-0 md:px-4 my-10">
+<section className="w-full md:max-w-[1352px] mx-auto px-0 md:px-4 my-10">
 
   {/* HEADER */}
   <div className="flex items-center justify-between mb-6">
@@ -36,7 +36,7 @@ return (
 
 
   {/* CARD */}
-  <div className="rounded-[16px] overflow-hidden group">
+  <div className="md:rounded-[16px] overflow-hidden group">
 
     {/* IMAGE WRAPPER */}
     <div className="relative">
@@ -52,7 +52,7 @@ return (
 
 
       {/* TAG */}
-     <span className="absolute top-[0px] left-[12px] md:top-0 md:left-11 bg-[#7a5959] text-white text-[10px] px-2 py-1">
+      <span className="absolute top-[0px] left-[12px] md:top-0 md:left-11  text-white text-[10px] bg-[#7a5959] px-2 py-1">
         VISA-PROCESS
       </span>
 
@@ -67,7 +67,7 @@ return (
 
 
       {/* MOBILE READ MORE */}
-      <button className="absolute bottom-[12px] right-[12px] md:hidden flex items-center gap-2 px-3 py-1 rounded-full bg-[#7a5959] text-white text-[11px] font-semibold">
+      <button className="absolute bottom-[15px] right-4 flex items-center gap-2 px-[14px] py-[6px] rounded-full border border-white/70 text-white text-[12px] bg-[#7a5959]  hover:bg-[#4a2f4a] transition">
         READ MORE →
       </button>
 
@@ -75,12 +75,12 @@ return (
       {/* DESKTOP TEXT */}
       <div className="hidden md:block absolute left-10 top-1/2 -translate-y-1/2 text-white max-w-[736px]">
 
-        <h3 className="font-['Yeseva_One'] text-[46px] leading-[52px] mt-[120px] text-white max-w-[736px]">
+        <h3 className="font-['Yeseva_One'] text-[26px] md:text-[36px] lg:text-[46px] leading-[1.25]  ">
           Serbia VISA for Indian <br />
           Passport Holders 2026 | Travel Rethink Ways
         </h3>
 
-        <button className="mt-[60px] flex items-center gap-2 px-6 py-3 rounded-full border-2 border-white bg-red-600 text-white font-semibold text-[14px] transition-all duration-300 group-hover:bg-black group-hover:border-red-500">
+        <button className="mt- flex items-center gap-2 px-6 py-3 rounded-full border-2 border-white bg-red-600 text-white font-semibold text-[14px] transition-all duration-300 group-hover:bg-black group-hover:border-red-500">
 
           READ MORE
 
