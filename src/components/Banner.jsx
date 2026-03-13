@@ -47,13 +47,7 @@ export default function Banner() {
   return (
     <div className="w-full max-w-[420px] sm:max-w-[1368px] mx-auto px-0 sm:px-4 lg:px-6 md:mt-[30px] lg:mt-[40px]">
 
-      <div className="relative w-full h-[380px] sm:h-[480px] md:h-[560px] lg:h-[540px] overflow-hidden rounded-none md:rounded-[16px] shadow-lg group">
-
-        {/* CLICKABLE BANNER LINK */}
-        <a
-          href={slides[active].link}
-          className="absolute inset-0 z-10"
-        ></a>
+      <div className="relative w-full h-[380px] sm:h-[480px] md:h-[560px] lg:h-[540px] overflow-hidden rounded-none md:rounded-[16px] shadow-lg">
 
         {/* SLIDES */}
         {slides.map((slide, index) => (
@@ -61,20 +55,18 @@ export default function Banner() {
             key={index}
             src={slide.image}
             alt="banner"
-            className={`absolute inset-0 w-full h-full object-cover brightness-[0.75] transition-opacity duration-700 ${
+            className={`absolute inset-0 w-full h-full object-cover brightness-[0.75] pointer-events-none transition-opacity duration-700 ${
               index === active ? "opacity-100" : "opacity-0"
             }`}
           />
         ))}
 
-        {/* MOBILE BLUE OVERLAY */}
-        <div className="absolute inset-0 bg-[#4b6f9e]/40 md:hidden"></div>
-
-        {/* MOBILE GRADIENT */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent md:hidden"></div>
+        {/* MOBILE OVERLAYS */}
+        <div className="absolute inset-0 bg-[#4b6f9e]/40 md:hidden pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent md:hidden pointer-events-none"></div>
 
         {/* DESKTOP OVERLAY */}
-        <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-black/0"></div>
+        <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-black/0 pointer-events-none"></div>
 
         {/* TAG */}
         <span className="absolute top-0 left-4 md:left-10 bg-[#55364b] md:bg-red-600 text-white text-[10px] sm:text-[11px] font-semibold uppercase px-2 py-[3px] rounded-sm shadow z-20">
@@ -90,7 +82,7 @@ export default function Banner() {
         </button>
 
         {/* DESKTOP TEXT */}
-        <div className="hidden md:block absolute left-10 top-1/2 -translate-y-1/2 max-w-[720px] text-white z-20">
+        <div className="hidden md:block absolute left-10 top-1/2 -translate-y-1/2 max-w-[720px] text-white z-30">
 
           <h1 className="text-[24px] md:text-[36px] lg:text-[46px] leading-[1.25] mb-5 font-['Yeseva_One']">
             {slides[active].title}
@@ -98,10 +90,12 @@ export default function Banner() {
 
           <a
             href={slides[active].link}
-            className="mt-5 inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-white bg-red-600 text-white font-semibold text-[14px]"
+            className="group inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-white bg-red-600 text-white font-semibold text-[14px] transition-all duration-300 hover:bg-black hover:border-red-500 cursor-pointer"
           >
             READ MORE
-            <span className="inline-block -rotate-[35deg]">➜</span>
+            <span className="inline-block -rotate-[35deg] transition-all duration-300 group-hover:rotate-0 group-hover:translate-x-[4px]">
+              ➜
+            </span>
           </a>
 
         </div>
@@ -124,10 +118,12 @@ export default function Banner() {
 
           <a
             href={slides[active].link}
-            className="absolute bottom-[130px] right-4 flex items-center gap-2 px-[14px] py-[6px] rounded-full border border-white/70 text-white text-[12px] bg-[#55364b]"
+            className="group absolute bottom-[130px] right-4 flex items-center gap-2 px-[14px] py-[6px] rounded-full border border-white/70 text-white text-[12px] bg-[#55364b]"
           >
             READ MORE
-            <span className="inline-block -rotate-[35deg]">➜</span>
+            <span className="inline-block -rotate-[35deg] transition-all duration-300 group-hover:rotate-0 group-hover:translate-x-[4px]">
+              ➜
+            </span>
           </a>
 
           <h1 className="text-[18px] leading-[1.3] font-['Yeseva_One']">
@@ -135,6 +131,7 @@ export default function Banner() {
           </h1>
 
         </div>
+
       </div>
     </div>
   );
