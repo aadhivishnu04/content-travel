@@ -45,7 +45,7 @@ return ( <section className="w-full md:max-w-[1320px] mx-auto px-4 my-10 md:my-1
     <div className="flex items-center gap-3">
       <div className="w-[3px] h-[24px] md:h-[26px] bg-red-500"></div>
 
-      <h2 className="text-[18px] md:text-[22px] font-semibold">
+      <h2 className="text-[15px] md:text-[22px] font-semibold">
         Latest Updates
       </h2>
     </div>

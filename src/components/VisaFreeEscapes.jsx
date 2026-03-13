@@ -15,7 +15,7 @@ return ( <section className="w-full md:max-w-[1320px] mx-auto mt-[40px] md:mt-[6
     <div className="flex items-center gap-3">
       <div className="w-[3px] h-[26px] bg-red-700"></div>
 
-      <h2 className="text-[20px] md:text-[36px] font-normal font-[Poppins]">
+      <h2 className="text-[15px] md:text-[36px] font-normal font-[Poppins]">
         VISA-Free Escapes
       </h2>
     </div>

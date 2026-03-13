@@ -60,7 +60,7 @@ return (
 
 <div className="w-[3px] h-[24px] md:h-[26px] bg-red-700"></div>
 
-<h2 className="text-[20px] md:text-[36px] font-normal font-[Poppins]">
+<h2 className="text-[15px] md:text-[36px] font-normal font-[Poppins]">
 What’s Your Travel Mood?
 </h2>
 

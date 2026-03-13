@@ -1,3 +1,4 @@
+import Header from "./components/Header"
 import Banner from "./components/Banner";
 import Tags from "./components/Tags";
 import Honeymooncard from "./components/Honeymooncard";
@@ -10,12 +11,14 @@ import AroundTheWorld from "./components/AroundTheWorld"
 import VisaFreeEscapes from "./components/VisaFreeEscapes"
 import LatestUpdates from "./components/LatestUpdates"
 import TravelMood from "./components/TravelMood"
+import Footer from "./components/Footer"
 
 
 
 function App() {
   return (
     <div>
+      <Header/>
       <Banner />
       <Tags />
       {/* <AdBanner /> */}
@@ -28,6 +31,7 @@ function App() {
       <VisaFreeEscapes/>
       <LatestUpdates/>
       <TravelMood/>
+      <Footer/>
        {/* <AdBanner />
        <AdBanner />
        <AdBanner />

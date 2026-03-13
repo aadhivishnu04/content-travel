@@ -17,7 +17,7 @@ return (
 <div className="flex items-center gap-3">
 <div className="w-[3px] h-[26px] md:h-[32px] bg-red-600"></div>
 
-<h2 className="text-[20px] md:text-[36px] font-normal font-[Poppins]">
+<h2 className="text-[15px] md:text-[36px] font-normal font-[Poppins]">
 Experience India by Month 2026
 </h2>
 </div>

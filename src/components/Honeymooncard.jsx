@@ -58,7 +58,7 @@ return(
 
 <span className="w-[3px] h-[24px] md:h-[30px] bg-red-600"></span>
 
-<h2 className="text-[20px] sm:text-[28px] md:text-[36px] font-medium leading-[1.2]">
+<h2 className="text-[15px] sm:text-[28px] md:text-[36px] font-medium leading-[1.2]">
 {section.title}
 </h2>
 

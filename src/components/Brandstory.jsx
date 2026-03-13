@@ -16,7 +16,7 @@ return (
     <div className="flex items-center gap-3">
       <div className="w-[3px] h-[28px] md:h-[36px] bg-red-600"></div>
 
-      <h2 className="text-[22px] md:text-[36px] font-normal font-[Poppins]">
+      <h2 className="text-[15px] md:text-[36px] font-normal font-[Poppins]">
         Brand Story
       </h2>
     </div>
