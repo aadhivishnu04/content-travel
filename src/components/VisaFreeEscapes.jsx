@@ -60,7 +60,7 @@ return ( <section className="w-full md:max-w-[1320px] mx-auto mt-[40px] md:mt-[6
       </button>
 
       {/* MOBILE BUTTON */}
-      <button className="absolute bottom-[15px] right-4 flex items-center gap-2 px-[14px] py-[6px] rounded-full border border-white/70 text-white text-[12px] bg-[#2f3e4f] 
+      <button className="absolute bottom-[15px] md:hidden right-4 flex items-center gap-2 px-[14px] py-[6px] rounded-full border border-white/70 text-white text-[12px] bg-[#2f3e4f] 
 
   hover:bg-[#4a2f4a] transition">
         READ MORE →

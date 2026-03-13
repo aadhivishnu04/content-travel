@@ -117,7 +117,7 @@ className="absolute top-[8px] right-[8px] w-[32px] h-[32px] flex items-center ju
 {/* MOBILE READ MORE */}
 
 <button
-className="absolute bottom-[20px] right-4 flex items-center gap-2 px-[14px] py-[6px] rounded-full border border-white/70 text-white text-[12px] bg-[#55364b] hover:bg-[#4a2f4a] transition"
+className="absolute bottom-[20px] md:hidden right-4 flex items-center gap-2 px-[14px] py-[6px] rounded-full border border-white/70 text-white text-[12px] bg-[#55364b] hover:bg-[#4a2f4a] transition"
 style={{ background: post.btn }}
 >
 READ MORE

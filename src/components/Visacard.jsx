@@ -67,7 +67,7 @@ return (
 
 
       {/* MOBILE READ MORE */}
-      <button className="absolute bottom-[15px] right-4 flex items-center gap-2 px-[14px] py-[6px] rounded-full border border-white/70 text-white text-[12px] bg-[#7a5959]  hover:bg-[#4a2f4a] transition">
+      <button className="absolute bottom-[15px] md:hidden right-4 flex items-center gap-2 px-[14px] py-[6px] rounded-full border border-white/70 text-white text-[12px] bg-[#7a5959]  hover:bg-[#4a2f4a] transition">
         READ MORE →
       </button>
 
