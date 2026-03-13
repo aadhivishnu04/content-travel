@@ -82,7 +82,7 @@ export default function Banner() {
         </button>
 
         {/* DESKTOP TEXT */}
-        <div className="hidden md:block absolute left-10 top-1/2 -translate-y-1/2 max-w-[720px] text-white z-30">
+        <div className="hidden md:block group absolute left-10 top-1/2 -translate-y-1/2 max-w-[720px] text-white z-30">
 
           <h1 className="text-[24px] md:text-[36px] lg:text-[46px] leading-[1.25] mb-5 font-['Yeseva_One']">
             {slides[active].title}
