@@ -69,7 +69,7 @@ return ( <section className="w-full md:max-w-[1320px] mx-auto px-4 my-10 md:my-1
 
     {/* IMAGE */}
 
-    <div className="w-full md:w-[48%] relative">
+    <div className="w-full md:w-[80%] relative">
 
       <img
         src={heroImg}

@@ -9,7 +9,7 @@ const [bookmark, setBookmark] = useState(false);
 return (
 
 
-<section className="w-full md:max-w-[1352px] mx-auto px-0 md:px-4 my-10">
+<section className="w-full md:max-w-[1320px] mx-auto px-0 md:px-4 my-10">
 
   {/* HEADER */}
   <div className="flex items-center justify-between mb-6">

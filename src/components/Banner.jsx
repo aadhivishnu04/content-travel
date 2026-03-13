@@ -15,18 +15,24 @@ export default function Banner() {
       title:
         "30 Best Places to Visit in India in March 2026 | Travel Rethink Ways",
       tag: "INDIA 2026",
+      link:
+        "https://travel.rethinkways.com/30-best-places-to-visit-in-january-in-india/",
     },
     {
       image: img2,
       title:
-        "Top 10 Family Friendly Destinations in India | Travel Rethink Ways",
+        "Top 10 Exotic VISA Free Honeymoon Destinations for Indians 2026 Romantic Travel Guide | Travel Rethink Ways",
       tag: "FAMILY GETAWAYS",
+      link:
+        "https://travel.rethinkways.com/top-10-visa-free-honeymoon-destinations/",
     },
     {
       image: img3,
       title:
-        "Best Romantic Honeymoon Places in India 2026 | Travel Rethink Ways",
+        "Top 10 Family Friendly Destinations in India | Travel Rethink Ways",
       tag: "HONEYMOON GLOBAL",
+      link:
+        "https://travel.rethinkways.com/family-friend-destination/",
     },
   ];
 
@@ -39,10 +45,15 @@ export default function Banner() {
   }, []);
 
   return (
-   <div className="w-full max-w-[420px] sm:max-w-[1368px] mx-auto px-0 sm:px-4 lg:px-6 md:mt-[30px] lg:mt-[40px]">
+    <div className="w-full max-w-[420px] sm:max-w-[1368px] mx-auto px-0 sm:px-4 lg:px-6 md:mt-[30px] lg:mt-[40px]">
 
-      {/* Banner Container */}
       <div className="relative w-full h-[380px] sm:h-[480px] md:h-[560px] lg:h-[540px] overflow-hidden rounded-none md:rounded-[16px] shadow-lg group">
+
+        {/* CLICKABLE BANNER LINK */}
+        <a
+          href={slides[active].link}
+          className="absolute inset-0 z-10"
+        ></a>
 
         {/* SLIDES */}
         {slides.map((slide, index) => (
@@ -66,36 +77,37 @@ export default function Banner() {
         <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-black/0"></div>
 
         {/* TAG */}
-        <span className="absolute top-0 left-4 md:left-10 bg-[#55364b] md:bg-red-600 text-white text-[10px] sm:text-[11px] font-semibold uppercase px-2 py-[3px] rounded-sm shadow">
+        <span className="absolute top-0 left-4 md:left-10 bg-[#55364b] md:bg-red-600 text-white text-[10px] sm:text-[11px] font-semibold uppercase px-2 py-[3px] rounded-sm shadow z-20">
           {slides[active].tag}
         </span>
 
         {/* BOOKMARK */}
         <button
           onClick={() => setBookmark(!bookmark)}
-          className="absolute top-4 right-4 w-9 h-9 sm:w-10 sm:h-10 bg-white rounded-full flex items-center justify-center text-red-600 shadow-md"
+          className="absolute top-4 right-4 w-9 h-9 sm:w-10 sm:h-10 bg-white rounded-full flex items-center justify-center text-red-600 shadow-md z-20"
         >
           {bookmark ? <FaBookmark /> : <FaRegBookmark />}
         </button>
 
         {/* DESKTOP TEXT */}
-        <div className="hidden md:block absolute left-10 top-1/2 -translate-y-1/2 max-w-[720px] text-white">
+        <div className="hidden md:block absolute left-10 top-1/2 -translate-y-1/2 max-w-[720px] text-white z-20">
 
           <h1 className="text-[24px] md:text-[36px] lg:text-[46px] leading-[1.25] mb-5 font-['Yeseva_One']">
             {slides[active].title}
           </h1>
 
-          <button className="mt-5 flex items-center gap-2 px-6 py-3 rounded-full border-2 border-white bg-red-600 text-white font-semibold text-[14px] transition-all duration-300 group-hover:bg-black group-hover:border-red-500">
+          <a
+            href={slides[active].link}
+            className="mt-5 inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-white bg-red-600 text-white font-semibold text-[14px]"
+          >
             READ MORE
-            <span className="inline-block -rotate-[35deg] transition-all duration-300 group-hover:rotate-0 group-hover:translate-x-[4px]">
-              ➜
-            </span>
-          </button>
+            <span className="inline-block -rotate-[35deg]">➜</span>
+          </a>
 
         </div>
 
         {/* DOT NAVIGATION */}
-        <div className="hidden md:flex flex-col gap-3 absolute right-5 top-1/2 -translate-y-1/2">
+        <div className="hidden md:flex flex-col gap-3 absolute right-5 top-1/2 -translate-y-1/2 z-20">
           {slides.map((_, index) => (
             <button
               key={index}
@@ -108,13 +120,15 @@ export default function Banner() {
         </div>
 
         {/* MOBILE CAPTION */}
-        <div className="absolute bottom-0 left-0 w-full md:hidden bg-[#55364b] text-white px-4 pt-8 pb-6">
+        <div className="absolute bottom-0 left-0 w-full md:hidden bg-[#55364b] text-white px-4 pt-8 pb-6 z-20">
 
-          {/* MOBILE BUTTON */}
-          <button className="absolute bottom-[130px] right-4 flex items-center gap-2 px-[14px] py-[6px] rounded-full border border-white/70 text-white text-[12px] bg-[#55364b] hover:bg-[#4a2f4a] transition">
+          <a
+            href={slides[active].link}
+            className="absolute bottom-[130px] right-4 flex items-center gap-2 px-[14px] py-[6px] rounded-full border border-white/70 text-white text-[12px] bg-[#55364b]"
+          >
             READ MORE
             <span className="inline-block -rotate-[35deg]">➜</span>
-          </button>
+          </a>
 
           <h1 className="text-[18px] leading-[1.3] font-['Yeseva_One']">
             {slides[active].title}

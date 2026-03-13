@@ -21,6 +21,7 @@ function App() {
       <Header/>
       <Banner />
       <Tags />
+      <LatestUpdates/>
       {/* <AdBanner /> */}
       <Honeymooncard />
       <Brandstory />
@@ -29,7 +30,6 @@ function App() {
       <UniqueStayStories/>
       <AroundTheWorld/>
       <VisaFreeEscapes/>
-      <LatestUpdates/>
       <TravelMood/>
       <Footer/>
        {/* <AdBanner />
