@@ -45,8 +45,6 @@ return(
 
 <div className="max-w-[1320px] mx-auto px-4 md:px-6 lg:px-8 py-10 md:py-14">
 
-{/* HEADER */}
-
 <div className="flex items-center justify-between mb-10">
 
 <div className="flex items-center gap-3">
@@ -57,7 +55,6 @@ Latest Updates
 </h2>
 </div>
 
-{/* Desktop Button */}
 <button className="hidden md:flex group items-center gap-2 px-5 py-2 rounded-full border-2 border-red-600 bg-red-600 text-white text-sm font-semibold transition-all duration-300 hover:bg-black">
 
 VIEW ALL
@@ -68,7 +65,6 @@ VIEW ALL
 
 </button>
 
-{/* Mobile Button */}
 <button className="flex md:hidden items-center justify-center w-[38px] h-[38px] rounded-full bg-red-600 text-white transition hover:bg-black">
 
 <span className="-rotate-[35deg] text-[14px]">
@@ -120,15 +116,42 @@ className="w-full h-[220px] sm:h-[260px] md:h-[300px] lg:h-[340px] object-cover"
 
 <div className="flex">
 
-<button className="ml-auto flex items-center gap-2 px-5 md:px-6 py-3 rounded-full border-2 border-red-600 bg-red-600 text-white font-semibold text-[13px] md:text-[14px] transition-all duration-300 group-hover:bg-black">
+<div
+className="
+ml-auto relative flex items-center
+h-[44px] w-[44px]
+rounded-full
+bg-[#D02525]
+text-white
+overflow-hidden
+transition-all duration-[650ms]
+ease-[cubic-bezier(0.19,1,0.22,1)]
+group-hover:w-[150px]
+"
+>
 
-READ MORE
-
-<span className="inline-block -rotate-[35deg] transition-all duration-300 group-hover:rotate-0 group-hover:translate-x-[4px]">
+<span className="flex items-center justify-center w-[44px] h-[44px] text-[14px]">
 →
 </span>
 
-</button>
+<span
+className="
+absolute left-[52px]
+whitespace-nowrap
+text-[14px]
+font-semibold
+opacity-0
+transform translate-x-[-10px]
+transition-all duration-[650ms]
+delay-[40ms]
+group-hover:opacity-100
+group-hover:translate-x-0
+"
+>
+READ MORE
+</span>
+
+</div>
 
 </div>
 
@@ -177,15 +200,42 @@ className="w-full h-[180px] sm:h-[200px] md:h-[210px] object-cover rounded-lg"
 
 <div className="flex mt-auto">
 
-<button className="ml-auto flex items-center gap-2 px-5 py-2.5 rounded-full border-2 border-red-600 bg-red-600 text-white font-semibold text-[13px] transition-all duration-300 group-hover:bg-black">
+<div
+className="
+ml-auto relative flex items-center
+h-[44px] w-[44px]
+rounded-full
+bg-[#D02525]
+text-white
+overflow-hidden
+transition-all duration-[650ms]
+ease-[cubic-bezier(0.19,1,0.22,1)]
+group-hover:w-[150px]
+"
+>
 
-READ MORE
-
-<span className="inline-block -rotate-[35deg] transition-all duration-300 group-hover:rotate-0 group-hover:translate-x-[4px]">
+<span className="flex items-center justify-center w-[44px] h-[44px] text-[14px]">
 →
 </span>
 
-</button>
+<span
+className="
+absolute left-[52px]
+whitespace-nowrap
+text-[14px]
+font-semibold
+opacity-0
+transform translate-x-[-10px]
+transition-all duration-[650ms]
+delay-[40ms]
+group-hover:opacity-100
+group-hover:translate-x-0
+"
+>
+READ MORE
+</span>
+
+</div>
 
 </div>
 
